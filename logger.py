@@ -1,5 +1,4 @@
 import csv
-from typing import List
 
 
 class Logger:
@@ -7,7 +6,7 @@ class Logger:
         self._csvfile = open(path, 'w')
         self._csvwriter = csv.writer(self._csvfile, delimiter=' ')
 
-    def log(self, values: List[float]):
+    def log(self, values):
         self._csvwriter.writerow(values)
 
     def complete(self):

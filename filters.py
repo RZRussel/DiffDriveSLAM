@@ -25,7 +25,7 @@ class AverageFilter:
     def next_value(self, value: float):
         self._values = [value] + self._values
 
-        if len(self._values) >= self._n:
+        if len(self._values) > self._n:
             self._values = self._values[0:len(self._values)-1]
 
         return sum(self._values)/len(self._values)

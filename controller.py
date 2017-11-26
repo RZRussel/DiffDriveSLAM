@@ -70,6 +70,8 @@ class WheeledRobotController:
             self._odometry.start_driving(angle, delta)
             sleep(delta)
 
+        self._odometry.stop_driving()
+
     @staticmethod
     def _occupied_from(x: float, y: float, theta: float, sonar_angle: float, distance: float) -> (float, float):
         occupied_x = x + distance*cos(sonar_angle + theta)

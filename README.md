@@ -32,6 +32,6 @@ Firstly, differential drive robot with 3 sonars must be constructed. One sonar i
 During the [experiment](https://www.youtube.com/watch?v=TkHmNSkewWQ) robot started from the position (0, 0) and 
 built the following map:
 
-![img](https://imgur.com/a/3dBuM)
+![img](https://s17.postimg.org/hu9f03d1r/map.png)
 
 # Algorithm

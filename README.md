@@ -35,3 +35,5 @@ built the following map:
 ![img](https://s17.postimg.org/hu9f03d1r/map.png)
 
 # Algorithm
+
+Main idea of the algorithm is based on PID controller and average filter. While moving through the labirynth algorithm reads data from the side sonars and tries to correct position of the robot to be in the middle of the corridor relatively opposite walls. To achive this difference between distances to the left and right walls considered and correction angle is calculated as ```atan2``` of this difference. To obtain stable process this angle is filtered using PID controller with parameters ```kp=0.25 ki=0.0 kd=0.1```. However data from the sonars are influenced by 3 types of errors: gaussian white noise, failures (fails to detect obstacle and return max value) and random measurement (returns unexplained measurements due to reflection of the signal or cross-talk with others). To overcome this problems the data was smoothed with average filter (n=3 - found using experements) and none-zero differential coefficient was applied to produce high response to steering.

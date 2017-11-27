@@ -24,7 +24,7 @@ map_x = list(map(lambda pair: pair[0], env_map))
 map_y = list(map(lambda pair: pair[1], env_map))
 
 plt.plot(robot_x, robot_y, 'go', label="robot's path")
-plt.plot(map_x, map_y, 'ro', label="map")
+plt.plot(map_x, map_y, 'ro', label="obstacles")
 
 plt.legend(loc='upper right')
 plt.show()
